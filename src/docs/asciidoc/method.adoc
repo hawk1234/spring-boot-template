@@ -1,0 +1,72 @@
+=== Method: {method_key}
+
+[cols="1,2"]
+|===
+| *Method* | {method_type}
+ifdef::method_path_param[]
+| *Path* | {api_base_url}{method_path_param}
+endif::method_path_param[]
+ifndef::method_path_param[]
+| *Path* | {api_base_url}{method_key}
+endif::method_path_param[]
+|===
+
+{method_desc}
+
+==== HTTP status codes
+
+[cols="1,2"]
+include::http-codes.adoc[]
+
+ifdef::include_request_fields,include_request_headers,include_request_params[]
+==== Request structure
+endif::include_request_fields,include_request_headers,include_request_params[]
+
+ifdef::include_request_headers[]
+.Request headers
+
+[cols="1,2"]
+include::{snippets}/{method_key}/request-headers.adoc[]
+endif::include_request_headers[]
+
+ifdef::include_request_params[]
+.Path parameters
+
+[cols="1,2"]
+include::{snippets}/{method_key}/path-parameters.adoc[]
+endif::include_request_params[]
+
+ifdef::include_request_fields[]
+.Request fields
+
+[cols="2,1,3"]
+include::{snippets}/{method_key}/request-fields.adoc[]
+endif::include_request_fields[]
+
+ifdef::include_response_fields,include_response_headers[]
+==== Response structure
+endif::include_response_fields,include_response_headers[]
+
+ifdef::include_response_headers[]
+.Response headers
+
+[cols="1,2"]
+include::{snippets}/{method_key}/response-headers.adoc[]
+endif::include_response_headers[]
+
+ifdef::include_response_fields[]
+.Response fields
+
+[cols="2,1,3"]
+include::{snippets}/{method_key}/response-fields.adoc[]
+endif::include_response_fields[]
+
+==== Example
+
+.Request
+
+include::{snippets}/{method_key}/curl-request.adoc[]
+
+.Response
+
+include::{snippets}/{method_key}/http-response.adoc[]

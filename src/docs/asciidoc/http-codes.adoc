@@ -1,0 +1,39 @@
+|===
+| Status code | Usage
+
+| `200 OK`
+| The request completed successfully.
+
+ifdef::include_http_code_for_unauthorized[]
+| `401 Unauthorized`
+| The request has not been applied because it lacks valid authentication credentials for the target resource.
+endif::include_http_code_for_unauthorized[]
+
+ifdef::include_http_code_for_forbidden[]
+| `403 Forbidden`
+| User has insufficient permissions to call this method.
+endif::include_http_code_for_forbidden[]
+
+ifdef::include_http_code_for_not_found[]
+| `404 Not Found`
+| The requested resource could not be found
+endif::include_http_code_for_not_found[]
+
+ifdef::include_http_code_for_bad_request[]
+| `400 Bad Request`
+| The request was malformed. The response body will include an error providing further information.
+endif::include_http_code_for_bad_request[]
+
+ifdef::include_http_code_for_unsupported_media[]
+| `415 Unsupported Media Type`
+| The request entity has a media type which the server does not support.
+endif::include_http_code_for_unsupported_media[]
+
+ifdef::include_http_code_for_unavailable[]
+| `503 Service Unavailable`
+| The request was well-formed but server is currently unavailable.
+endif::include_http_code_for_unavailable[]
+
+| `5xx Unexpected Server Error`
+| The server failed to fulfill an apparently valid request. If an unspecified error in range 500-599 occurred contact our support at {contact_support}.
+|===
